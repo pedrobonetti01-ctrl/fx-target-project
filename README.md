@@ -1,4 +1,4 @@
-# 🌍 FX Target
+<img width="1279" height="799" alt="Imagem de Organizando as Ideias no Milanote" src="https://github.com/user-attachments/assets/fee776e3-16bd-44d2-86fb-21aac3db2547" /># 🌍 FX Target
 
 > Um planejador financeiro inteligente focado em metas internacionais, conversão de câmbio em tempo real e tracking ativo com design Mobile-First.
 
@@ -30,12 +30,12 @@ Utilizei o **Milanote** para curadoria de referências visuais e o **Coolors** p
 
 | Referências (Milanote) | Paleta de Cores (Coolors) |
 |---|---|
-| ![Milanote](../Downloads/FX%20Target%20-%20Imagens%20de%20Desenvolvimento/Imagem%20de%20Organizando%20as%20Ideias%20no%20Milanote.png) | ![Coolors](../Downloads/FX%20Target%20-%20Imagens%20de%20Desenvolvimento/Imagem%20da%20Paleta%20de%20Cor%20do%20Coolors%20usada.png) |
+| ![Milanote](<img width="1279" height="799" alt="Imagem de Organizando as Ideias no Milanote" src="https://github.com/user-attachments/assets/a0f514ea-4d4f-4e8e-8c18-238103c2f3a3" />) | ![Coolors](<img width="1279" height="799" alt="Imagem da Paleta de Cor do Coolors usada" src="https://github.com/user-attachments/assets/ee641106-36ff-406d-aeab-e3e57676486b" />) |
 
 ### 🛠️ Workflow & Metodologia Ágil
 A gestão de tarefas é realizada via **Kanban no Trello**, simulando o fluxo de trabalho de grandes empresas de tecnologia (To Do, Doing, Done).
 
-![Trello Board](../Downloads/FX%20Target%20-%20Imagens%20de%20Desenvolvimento/Imagem%20da%20Extrutura%20Kanban.png)
+![Trello Board](<img width="1279" height="799" alt="Imagem da Extrutura Kanban" src="https://github.com/user-attachments/assets/aac87aac-cc3c-41b0-a159-8b35b638cc24" />)
 
 ---
 
