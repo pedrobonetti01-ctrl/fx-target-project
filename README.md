@@ -1,4 +1,4 @@
-<img width="1279" height="799" alt="Imagem de Organizando as Ideias no Milanote" src="https://github.com/user-attachments/assets/fee776e3-16bd-44d2-86fb-21aac3db2547" /># 🌍 FX Target
+# 🌍 FX Target
 
 > Um planejador financeiro inteligente focado em metas internacionais, conversão de câmbio em tempo real e tracking ativo com design Mobile-First.
 
@@ -17,7 +17,7 @@
 
 Planejar uma viagem, um intercâmbio ou a compra de um bem no exterior utilizando a moeda local é um desafio matemático complexo devido à volatilidade do mercado financeiro. O **FX Target** resolve essa dor de forma direta. 
 
-O sistema projeta o tempo real necessário e ativa um **cronômetro regressivo visual (Active Tracker)**, projetado especificamente para manter o usuário engajado e focado no objetivo diretamente pelo smartphone.
+O sistema projeta o tempo real necessário e ativa um **cronômetro regressivo visual (Active Tracker)**, projetado especificamente para manter o usuário engajado e focado do objetivo diretamente pelo smartphone.
 
 ---
 
@@ -29,13 +29,15 @@ Antes de qualquer linha de código, o projeto passou por uma imersão técnica e
 Utilizei o **Milanote** para curadoria de referências visuais e o **Coolors** para a definição de uma paleta de cores equilibrada que transmite confiança e modernidade.
 
 | Referências (Milanote) | Paleta de Cores (Coolors) |
-|---|---|
-| ![Milanote](<img width="1279" height="799" alt="Imagem de Organizando as Ideias no Milanote" src="https://github.com/user-attachments/assets/a0f514ea-4d4f-4e8e-8c18-238103c2f3a3" />) | ![Coolors](<img width="1279" height="799" alt="Imagem da Paleta de Cor do Coolors usada" src="https://github.com/user-attachments/assets/ee641106-36ff-406d-aeab-e3e57676486b" />) |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/a0f514ea-4d4f-4e8e-8c18-238103c2f3a3" width="100%" alt="Organizando as Ideias no Milanote" /> | <img src="https://github.com/user-attachments/assets/ee641106-36ff-406d-aeab-e3e57676486b" width="100%" alt="Paleta de Cor do Coolors usada" /> |
 
 ### 🛠️ Workflow & Metodologia Ágil
 A gestão de tarefas é realizada via **Kanban no Trello**, simulando o fluxo de trabalho de grandes empresas de tecnologia (To Do, Doing, Done).
 
-![Trello Board](<img width="1279" height="799" alt="Imagem da Extrutura Kanban" src="https://github.com/user-attachments/assets/aac87aac-cc3c-41b0-a159-8b35b638cc24" />)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/aac87aac-cc3c-41b0-a159-8b35b638cc24" width="100%" alt="Estrutura Kanban no Trello" />
+</div>
 
 ---
 
@@ -45,11 +47,11 @@ O motor do sistema realiza cálculos dinâmicos utilizando a taxa de câmbio atu
 
 $$Tempo_{meses} = \frac{Meta_{Estrangeira} \times Taxa_{Cambio}}{Economia_{MensalLocal}}$$
 
-Se o tempo calculado for menor ou igual ao prazo estipulado pelo usuário, o projeto é marcado como **Viável**. Caso contrário, o sistema calcula automaticamente a quantidade de meses excedentes.
+Se o tempo calculated for menor ou igual ao prazo estipulado pelo usuário, o projeto é marcado como **Viável**. Caso contrário, o sistema calcula automaticamente a quantidade de meses excedentes.
 
 ---
 
-## 🛠️ Arquitetura Técnica (Vanilla Stack)
+## 🛠️ Arquitetura Técnico (Vanilla Stack)
 
 Focado no ecossistema core da web para garantir performance extrema:
 
