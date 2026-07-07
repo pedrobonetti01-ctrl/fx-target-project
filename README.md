@@ -30,12 +30,12 @@ Utilizei o **Milanote** para curadoria de referências visuais e o **Coolors** p
 
 | Referências (Milanote) | Paleta de Cores (Coolors) |
 |---|---|
-| ![Milanote](https://i.imgur.com/vH3jT8c.png) | ![Coolors](https://i.imgur.com/uW6Z3U4.png) |
+| ![Milanote](../Downloads/FX%20Target%20-%20Imagens%20de%20Desenvolvimento/Imagem%20de%20Organizando%20as%20Ideias%20no%20Milanote.png) | ![Coolors](../Downloads/FX%20Target%20-%20Imagens%20de%20Desenvolvimento/Imagem%20da%20Paleta%20de%20Cor%20do%20Coolors%20usada.png) |
 
 ### 🛠️ Workflow & Metodologia Ágil
 A gestão de tarefas é realizada via **Kanban no Trello**, simulando o fluxo de trabalho de grandes empresas de tecnologia (To Do, Doing, Done).
 
-![Trello Board](https://i.imgur.com/Y3U3HjL.png)
+![Trello Board](../Downloads/FX%20Target%20-%20Imagens%20de%20Desenvolvimento/Imagem%20da%20Extrutura%20Kanban.png)
 
 ---
 
@@ -70,9 +70,3 @@ Focado no ecossistema core da web para garantir performance extrema:
 - [ ] Configuração do Ambiente Local (Estrutura Base)
 - [ ] Implementação do Consumo de API (AwesomeAPI)
 - [ ] Desenvolvimento da Lógica de Cálculo e Active Tracker
-
----
-
-## 👨‍💻 Autor
-
-**Pedro Bonetti** - [GitHub](https://github.com/PedroBonetti) | [LinkedIn](https://www.linkedin.com/in/pedrobonetti)
