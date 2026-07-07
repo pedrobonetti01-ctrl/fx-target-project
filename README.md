@@ -2,30 +2,40 @@
 
 > Um planejador financeiro inteligente focado em metas internacionais, conversão de câmbio em tempo real e tracking ativo com design Mobile-First.
 
-[![Figma](https://img.shields.io/badge/Figma-Prototipo%20Interativo-F24E1E?logo=figma&logoColor=white)](LINK_DO_SEU_FIGMA_AQUI)
-[![Status do Projeto](https://img.shields.io/badge/Status-Planejamento%20%26%20Arquitetura-blue)](#)
+<div align="center">
+  <a href="https://youtu.be/fh3A19srT-Y">
+    <img src="https://img.shields.io/badge/V%C3%8DDEO_PITCH-Assistir_Agora-red?style=for-the-badge&logo=youtube" alt="Vídeo Pitch">
+  </a>
+  <a href="https://www.figma.com/design/Hv3Dk6ZfX6YjIEsxRdASWy/FX-Target?node-id=0-1&t=GNUCUhdcWHnRZWgC-1">
+    <img src="https://img.shields.io/badge/PROT%C3%93TIPO-Explorar_no_Figma-blue?style=for-the-badge&logo=figma" alt="Figma Design">
+  </a>
+</div>
 
 ---
 
 ## 🎯 O Pitch
 
-Planejar uma viagem, um intercâmbio ou a compra de um bem no exterior utilizando a moeda local é um desafio matemático complexo devido à volatilidade do mercado financeiro. A maioria das pessoas não consegue mensurar com precisão quanto precisa poupar em sua moeda local (BRL) para atingir um objetivo cotado em moedas estrangeiras como Dólar (USD) ou Euro (EUR).
+Planejar uma viagem, um intercâmbio ou a compra de um bem no exterior utilizando a moeda local é um desafio matemático complexo devido à volatilidade do mercado financeiro. O **FX Target** resolve essa dor de forma direta. 
 
-O **FX Target** resolve esse problema de forma direta e intuitiva. O usuário define o valor que consegue poupar mensalmente em sua moeda local, estipula a meta na moeda final estrangeira e o prazo desejado. O sistema calcula a viabilidade instantaneamente, projeta o tempo real necessário e ativa um **cronômetro regressivo visual (Active Tracker)**, projetado especificamente para manter o usuário engajado e focado no objetivo diretamente pelo smartphone.
+O sistema projeta o tempo real necessário e ativa um **cronômetro regressivo visual (Active Tracker)**, projetado especificamente para manter o usuário engajado e focado no objetivo diretamente pelo smartphone.
 
 ---
 
-## 🛠️ Arquitetura Técnica (Vanilla Stack)
+## 🧠 Planejamento Estratégico (The "Pentagon" Plan)
 
-Para garantir máxima performance, carregamento instantâneo e uma base de código sólida, a aplicação foi desenvolvida sem a dependência de frameworks (*No-Framework Architecture*), focando no ecossistema core da web:
+Antes de qualquer linha de código, o projeto passou por uma imersão técnica e criativa para garantir previsibilidade e assertividade:
 
-### Frontend & Interface
-* **Tecnologias Core:** HTML5 semântico e CSS3 avançado, estruturados sob a metodologia **Mobile-First** para garantir que a experiência de uso seja perfeita e responsiva em dispositivos móveis.
-* **Lógica e Reatividade (Vanilla JS):** Utilização de JavaScript Puro para manipulação assíncrona da DOM, gerenciamento do estado do cronômetro em tempo real e controle de fluxos sem o overhead de pacotes externos.
-* **Persistência Local (Web Storage API):** Implementação de `localStorage` para reter os dados de metas do usuário e o estado ativo do cronômetro sincronizados, mesmo que a página seja atualizada ou fechada.
+### 🎨 Design & Visual Identity
+Utilizei o **Milanote** para curadoria de referências visuais e o **Coolors** para a definição de uma paleta de cores equilibrada que transmite confiança e modernidade.
 
-### Integrações (APIs)
-* **Cálculo de Câmbio:** Consumo assíncrono via `fetch()` da `AwesomeAPI` (Economia) para obter as cotações de moedas em tempo real com tratamento de erros robusto (`try/catch`).
+| Referências (Milanote) | Paleta de Cores (Coolors) |
+|---|---|
+| ![Milanote](https://i.imgur.com/vH3jT8c.png) | ![Coolors](https://i.imgur.com/uW6Z3U4.png) |
+
+### 🛠️ Workflow & Metodologia Ágil
+A gestão de tarefas é realizada via **Kanban no Trello**, simulando o fluxo de trabalho de grandes empresas de tecnologia (To Do, Doing, Done).
+
+![Trello Board](https://i.imgur.com/Y3U3HjL.png)
 
 ---
 
@@ -35,13 +45,34 @@ O motor do sistema realiza cálculos dinâmicos utilizando a taxa de câmbio atu
 
 $$Tempo_{meses} = \frac{Meta_{Estrangeira} \times Taxa_{Cambio}}{Economia_{MensalLocal}}$$
 
-Se o tempo calculado for menor ou igual ao prazo estipulado pelo usuário, o projeto é marcado como **Viável**. Caso contrário, o sistema calcula automaticamente a quantidade de meses excedentes e exibe uma projeção clara com o valor sugerido de economia extra para cumprir a meta original.
+Se o tempo calculado for menor ou igual ao prazo estipulado pelo usuário, o projeto é marcado como **Viável**. Caso contrário, o sistema calcula automaticamente a quantidade de meses excedentes.
 
 ---
 
-## 📅 Próximos Passos (Roadmap de Desenvolvimento)
+## 🛠️ Arquitetura Técnica (Vanilla Stack)
+
+Focado no ecossistema core da web para garantir performance extrema:
+
+- **Frontend:** HTML5 semântico e CSS3 avançado (Flexbox/Grid).
+- **Metodologia:** Mobile-First for real-world usage.
+- **Lógica:** JavaScript Vanilla (Sem frameworks, foco em fundamentos).
+- **APIs:** Integração assíncrona com `AwesomeAPI` para cotações em tempo real.
+- **Persistência:** `Web Storage API` para retenção de dados local.
+
+---
+
+## 📅 Roadmap de Desenvolvimento
 - [x] Concepção da Ideia e Validação de Regras de Negócio
-- [ ] Prototipagem de Alta Fidelidade com foco em Mobile UI (Figma)
-- [ ] Configuração do Ambiente de Desenvolvimento Local (Estrutura Base de Arquivos)
-- [ ] Implementação de Consumo Assíncrono da API de Câmbio (MVP)
-- [ ] Desenvolvimento da Lógica do Cronômetro Regressivo com Persistência em Cache local
+- [x] Estruturação do Pitch e Vídeo de Apresentação
+- [x] Curadoria de referências no Milanote e definição de cores no Coolors
+- [x] Prototipagem de Alta Fidelidade (Figma)
+- [x] Gestão de fluxo via Kanban (Trello)
+- [ ] Configuração do Ambiente Local (Estrutura Base)
+- [ ] Implementação do Consumo de API (AwesomeAPI)
+- [ ] Desenvolvimento da Lógica de Cálculo e Active Tracker
+
+---
+
+## 👨‍💻 Autor
+
+**Pedro Bonetti** - [GitHub](https://github.com/PedroBonetti) | [LinkedIn](https://www.linkedin.com/in/pedrobonetti)
