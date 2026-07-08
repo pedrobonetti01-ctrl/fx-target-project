@@ -1,4 +1,5 @@
-<img width="958" height="539" alt="fx-target-dia-de-html-pagina-de-projetos" src="https://github.com/user-attachments/assets/e20c4eab-8624-4a1c-8f0f-a4dc3ece6e9d" /># 🌍 FX Target
+<img width="286" height="100" alt="FX Target Logo" src="https://github.com/user-attachments/assets/4237d375-2e4c-4aed-a8dc-dd4f1525a5e4" />
+
 
 > Um planejador financeiro inteligente focado em metas internacionais, conversão de câmbio em tempo real e tracking ativo com design Mobile-First.
 
