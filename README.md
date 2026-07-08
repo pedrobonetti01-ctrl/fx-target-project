@@ -1,5 +1,6 @@
-<img width="286" height="100" alt="FX Target Logo" src="https://github.com/user-attachments/assets/4237d375-2e4c-4aed-a8dc-dd4f1525a5e4" />
-
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4237d375-2e4c-4aed-a8dc-dd4f1525a5e4" alt="FX Target Logo" />
+</div>
 
 > Um planejador financeiro inteligente focado em metas internacionais, conversão de câmbio em tempo real e tracking ativo com design Mobile-First.
 
