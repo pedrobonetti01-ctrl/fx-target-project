@@ -1,0 +1,24 @@
+/* VARIABLES */
+
+:root {
+    /* ACTION AND MARK COLORS */
+    --action-primary: #1573FF;
+    --action-primary-hover: #0056cc;
+
+    /* BACKGROUND COLORS */
+    --bg-header: #F8F8F8;
+    --bg-section-accent: #F2E9CD;
+    --bg-dark: #232E21;
+    --bg-dark-light: #313F2E;
+    --bg-hamburger-bar: #5c5c5c;
+
+    /* INTERFACE ELEMENT COLORS */
+    --btn-white-bg: #FFFFFF;
+    --btn-white-border: #B0B0B0;
+    
+    --action-primary-border: #0e49a2;
+
+
+    /* FONTS */
+    --font-main: 'Space Grotesk', sans-serif;
+}

@@ -1,0 +1,55 @@
+/* CARDS CONTAINER */
+
+.cards {
+    background-color: var(--bg-section-accent);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card-title {
+    margin: 20px 20px;
+}
+
+.card-item{
+    width: 350px;
+    height: 500px;
+    border-radius: 7px;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-item h3{
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #00000084;
+    margin-bottom: 20px;
+}
+
+.card-item p{
+    font-size: 14px;
+    text-shadow: 0px 0px 5px #00000084;
+    font-weight: 200;
+}
+
+.card-background{
+    background-color: rgba(0, 0, 0, 0.297);
+    color: white;
+    border-radius: 7px;
+    padding: 2rem;
+}
+
+.card-problema{
+    background-image: url(../images/Imagem\ de\ Pessoa\ Entediada\ em\ um\ Escritório\ Chato.jpg);
+}
+
+.card-solucao{
+    background-image: url(../images/Imagem\ de\ Planejando\ uma\ Faculdade\ no\ Exterior.jpg);
+}

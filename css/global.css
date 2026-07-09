@@ -1,0 +1,9 @@
+/* GLOBAL */
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-main);
+}
