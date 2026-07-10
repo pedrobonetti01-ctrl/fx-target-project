@@ -81,7 +81,7 @@ O motor do sistema realiza cálculos dinâmicos utilizando a taxa de câmbio atu
 
 $$Tempo_{meses} = \frac{Meta_{Estrangeira} \times Taxa_{Cambio}}{Economia_{MensalLocal}}$$
 
-Se o tempo calculado for menor ou igual ao prazo estipulado pelo usuário, o projeto é marcado como **Viável**. Caso contrário, o sistema calcula automaticamente a quantidade de meses excedentes.
+Se o tempo calculated for menor ou igual ao prazo estipulado pelo usuário, o projeto é marcado como **Viável**. Caso contrário, o sistema calcula automaticamente a quantidade de meses excedentes.
 
 ---
 
@@ -94,3 +94,20 @@ Focado no ecossistema core da web para garantir performance extrema:
 - **Lógica:** JavaScript Vanilla (Sem frameworks, foco em manipulação limpa da DOM).
 - **APIs:** Integração assíncrona com `AwesomeAPI` para cotações em tempo real.
 - **Persistência:** `Web Storage API` para retenção de dados local.
+
+---
+
+## 📅 Histórico de Progresso (Checklist)
+
+- [x] Imersão criativa e referências visuais (Milanote & Coolors)
+- [x] Definição de fluxos e arquitetura Kanban (Trello)
+- [x] Estruturação do esqueleto e semântica HTML5 (Dia 1)
+- [x] Estilização completa e interface responsiva com CSS3 (Dia 2)
+- [x] Adaptação e refatoração Mobile-First da Home principal
+- [x] Implementação do Glassmorphism e posicionamentos avançados na tela de cadastro
+- [x] Migração de tabelas para estrutura semântica de `key-value rows` (`<dl>`)
+- [ ] Integração com JavaScript Core para cálculos assíncronos da AwesomeAPI
+- [ ] Implementação de manipulação da DOM para salvar e listar metas no LocalStorage
+- [ ] Adicionar funcionalidade para remoção dinâmica de projetos (MVP Core)
+- [ ] Implementar cronômetro regressivo ativo (V2 Backlog)
+- [ ] Adicionar funcionalidade de edição de projetos (V2 Backlog)
