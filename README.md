@@ -67,11 +67,11 @@ Além disso, apliquei técnicas de profundidade como **Glassmorphism** (`backdro
 
 | Home Mobile Pronta | Criação de Metas Mobile | Interface Dinâmica de Projetos |
 | :---: | :---: | :---: |
-| <img src="uploaded:Topo da Pagina na Home.jpg-cfc9449d-6c93-459e-b2be-8f2a1ebcc658" width="100%" alt="Home Pronta Mobile" /> | <img src="uploaded:Tela de Cadastro da Meta.jpg-39fbf727-7053-49ee-82b0-8b2b6eed1886" width="100%" alt="Formulário Customizado Mobile" /> | <img src="uploaded:Tela de Projetos (em desenvolvimento).png-c2fb69fc-3fc6-411b-92f3-6aa67ebc685e" width="100%" alt="Nova Estrutura Key-Value Rows" /> |
+| <img src="https://github.com/user-attachments/assets/39c8ab23-8161-478c-8c0f-f746eefcea4c" width="100%" alt="Home Pronta Mobile" /> | <img src="https://github.com/user-attachments/assets/400dc16f-30cc-40af-8545-f6d9999d45d2" width="100%" alt="Formulário Customizado Mobile" /> | <img src="https://github.com/user-attachments/assets/85ee8a71-1e68-454d-8bb0-0060daeb5e52" width="100%" alt="Nova Estrutura Key-Value Rows" /> |
 
 | Detalhes Visuais e Bio do Autor |
 | :---: |
-| <img src="uploaded:Section do Criador.jpg-1adb1c79-7c75-40b1-a9d5-6e40b3c41dae" width="50%" alt="Seção Customizada Sobre o Criador" /> |
+| <img src="https://github.com/user-attachments/assets/1d90f609-6610-4488-9e1a-15ffe0919869" width="50%" alt="Seção Customizada Sobre o Criador" /> |
 
 ---
 
