@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/create-goal.css">
     <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -39,7 +45,14 @@
 
     <!-- start of the form -->
     <main class="form-container">
-        <p>Para criar um novo projeto preencha as informações presentes nos campos abaixo:</p>
+        <div class="form-image">
+            <img src="../images/pexels-rodeo-software-515182715-16368789.jpg" alt="">
+        </div>
+
+        <div class="form-stylized-title">
+            <p>Criação do Projeto</p>
+        </div>
+        
 
         <form class="goal-form">
             <div class="form-row">
@@ -84,11 +97,12 @@
                 <input type="number">
             </div>
 
-            <div>
-                <a href="../index.html" class="btn-secondary">Voltar</a>
-                <button type="submit" class="btn-primary">Calcular</button>
-            </div>
         </form>
+
+        <div class="actions-interface">
+            <a href="../index.html" class="btn-secondary">Voltar</a>
+            <button type="submit" class="btn-primary">Calcular</button>
+        </div>
     </main>
     <!-- end of the form -->
 

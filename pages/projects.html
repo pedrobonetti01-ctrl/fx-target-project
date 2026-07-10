@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -18,9 +25,9 @@
     <header class="main-header">
 
         <button class="button-toggle">
-            <span class="hamburguer-bar">_</span>
-            <span class="hamburguer-bar">_</span>
-            <span class="hamburguer-bar">_</span>
+            <span class="hamburguer-bar"></span>
+            <span class="hamburguer-bar"></span>
+            <span class="hamburguer-bar"></span>
         </button>
 
         <div class="logo-container">
@@ -33,50 +40,48 @@
     </header>
     <!-- end of the header -->
 
-    
-    <!-- start of the image --> <!-- THIS MIGHT BE TEMPORARY!-->
-    <div class="image-section">
-        <img src="../images/to do list image.jpg" alt="">
-    </div>
-    <!-- end of the image -->
-
 
     <!-- start of the tables -->
     <div class="projects-container">
-        <h2>Metas Criadas:</h2>
+        <h2>Projects:</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome do Projeto</th>
-                    <th>Mensal</th>
-                    <th>Final</th>
-                    <th>Aplicação</th>
-                    <th>Aplicado</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Meu Intercâmbio</td>
-                    <td>500.00</td>
-                    <td>USD</td>
-                    <td>5,000.00</td>
-                    <td>10</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="key-value-rows">
+            <div class="key-value-interface">
+                <p><i class="fa-solid fa-pencil"></i>Edit</p>
+                <p><i class="fa-solid fa-circle-xmark"></i>Remove</p>
+            </div>
+            <div class="key-value-item">
+                <p><strong>NAME:</strong></p>
+                <p>Faculdade no Exterior</p>
+            </div>
+            <div class="key-value-item">
+                <p><strong>CREATION DATE:</strong></p>
+                <p>Oct 12, 2023</p>
+            </div>
+            <div class="key-value-item">
+                <p><strong>MONTHLY EARNINGS:</strong></p>
+                <p>$2.450.00</p>
+            </div>
+            <div class="key-value-item">
+                <p><strong>FINAL ESTIMATE:</strong></p>
+                <p>$3.000.00</p>
+            </div>
+            <div class="key-value-item">
+                <p><strong>STATUS:</strong></p>
+                <p>ACTIVE</p>
+            </div>
+        </div>
 
         <div class="table-actions">
-            <a href="../index.html">Voltar</a>
-            <a href="../pages/create-goal.html">Criar Meta</a>
+            <a href="../index.html" class="table-btn-back">Voltar</a>
+            <a href="../pages/create-goal.html" class="table-btn-create-goal">Criar Meta</a>
         </div>
     </div>
     <!-- end of the tables -->
 
 
     <!-- start of the footer -->
-    <footer>
+    <footer class="footer">
         <p>Todos os Direitos Reservados ©</p>
     </footer>
     <!-- end of the footer -->

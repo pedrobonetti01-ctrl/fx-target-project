@@ -3,6 +3,7 @@
 .hero-section{
     width: 100%;
     height: 300px;
+    margin-top: 90px;
 
     background-image: url(../images/Imagem\ de\ Graficos\ de\ Investimento.jpg);
     background-repeat: no-repeat;
