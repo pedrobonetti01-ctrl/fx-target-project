@@ -16,7 +16,7 @@
     padding: 0; 
     
     background-color: var(--bg-header); 
-    border: 2px solid var(--btn-white-border); 
+    border: 2px solid var(--bg-hamburger-bar); 
     border-radius: 4px; 
 
     display: flex;

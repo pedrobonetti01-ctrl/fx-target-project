@@ -1,6 +1,46 @@
 /* CREATOR */
 
 .creator-section {
-    background-image: url(../images/Temporary\ Background\ Creator\ Section.jpg);
+    background-image: url(../images/Imagem\ de\ Background\ para\ Creator\ Section.jpg);
+    background-position: center;
+    background-size: cover;
+
     color: white;
+}
+
+.creator-section h2{
+    background-color: var(--bg-section-accent);
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.creator-background{
+    display: flex;
+    flex-direction: row;
+
+    padding: 1.5rem;
+}
+
+.creator-background p {
+    text-shadow: 0px 0px 5px #0000004a;
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.social-midia {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.creator-photo{
+    min-width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.creator-photo img{
+    border-radius: 50%;
 }
