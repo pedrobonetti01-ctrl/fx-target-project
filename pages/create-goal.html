@@ -52,57 +52,57 @@
         <div class="form-stylized-title">
             <p>Criação do Projeto</p>
         </div>
-        
 
-        <form class="goal-form">
+
+        <form class="goal-form" id="goalForm">
             <div class="form-row">
-                <label for="">Nome do Projeto:</label>
-                <input type="text">
+                <label for="projectName">Nome do Projeto:</label>
+                <input type="text" id="projectName">
             </div>
 
             <div class="form-row">
-                <label for="">Reserva mensal:</label>
-                <input type="number">
+                <label for="monthlyReserve">Reserva mensal:</label>
+                <input type="number" id="monthlyReserve">
             </div>
 
             <div class="radio-group">
-                <input type="radio" name="monthly-currency-choice" value="BRL">
-                <label for="">BRL</label>
+                <input type="radio" id="monthBRL" name="monthly-currency-choice" value="BRL" checked>
+                <label for="monthBRL">BRL</label>
 
-                <input type="radio" name="monthly-currency-choice" value="USD">
-                <label for="">USD</label>
+                <input type="radio" id="monthUSD" name="monthly-currency-choice" value="USD">
+                <label for="monthUSD">USD</label>
 
-                <input type="radio" name="monthly-currency-choice" value="EUR">
-                <label for="">EUR</label>
+                <input type="radio" id="monthEUR" name="monthly-currency-choice" value="EUR">
+                <label for="monthEUR">EUR</label>
             </div>
 
             <div class="form-row">
-                <label for="">Meta final:</label>
-                <input type="number">
+                <label for="finalTarget">Meta final:</label>
+                <input type="number" id="finalTarget">
             </div>
 
             <div class="radio-group">
-                <input type="radio" name="final-currency-choice" value="BRL">
-                <label for="">BRL</label>
+                <input type="radio" id="finalBRL" name="final-currency-choice" value="BRL" checked>
+                <label for="finalBRL">BRL</label>
 
-                <input type="radio" name="final-currency-choice" value="USD">
-                <label for="">USD</label>
+                <input type="radio" id="finalUSD" name="final-currency-choice" value="USD">
+                <label for="finalUSD">USD</label>
 
-                <input type="radio" name="final-currency-choice" value="EUR">
-                <label for="">EUR</label>
+                <input type="radio" id="finalEUR" name="final-currency-choice" value="EUR">
+                <label for="finalEUR">EUR</label>
             </div>
 
             <div class="form-row">
-                <label for="">Tempo de aplicação:</label>
-                <input type="number">
+                <label for="projectApplication">Tempo de aplicação:</label>
+                <input type="number" id="projectApplication">
             </div>
 
+            <div class="actions-interface">
+                <a href="../index.html" class="btn-secondary">Voltar</a>
+                <button type="submit" class="btn-primary">Calcular</button>
+            </div>
         </form>
 
-        <div class="actions-interface">
-            <a href="../index.html" class="btn-secondary">Voltar</a>
-            <button type="submit" class="btn-primary">Calcular</button>
-        </div>
     </main>
     <!-- end of the form -->
 
@@ -111,6 +111,7 @@
         <p>Todos os Direitos Reservados ©</p>
     </footer>
     <!-- end of the footer -->
+    <script type="module" src="../js/create-goal.js"></script>
 </body>
 
 </html>
