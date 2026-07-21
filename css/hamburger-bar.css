@@ -1,0 +1,157 @@
+/* ==========================================================================
+SIDE NAVIGATION / HAMBURGER MENU - MODERN ENTERPRISE STANDARD
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+. BOTÃO TOGGLE (HAMBÚRGUER NO HEADER)
+   -------------------------------------------------------------------------- */
+.button-toggle {
+    background: transparent;
+    border: 2px solid var(--bg-hamburger-bar, #a57ae3);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    z-index: 1001;
+    /* Garante clique fácil */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.button-toggle:hover {
+    background-color: rgba(165, 122, 227, 0.15);
+    transform: translateY(-1px);
+}
+
+.button-toggle:active {
+    transform: scale(0.95);
+}
+
+.button-toggle .hamburguer-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--bg-hamburger-bar, #a57ae3);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+2. PAINEL DO MENU LATERAL (DRAWER)
+   -------------------------------------------------------------------------- */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    /* Largura perfeita para leitura e toque */
+    max-width: 80vw;
+    /* Proteção em telas muito pequenas */
+    height: 100vh;
+    height: 100dvh;
+    /* Garante preenchimento exato em navegadores mobile */
+
+    /* Z-INDEX CRÍTICO: Supera o header (1000) e qualquer outro elemento */
+    z-index: 9999;
+
+    background-color: rgba(26, 26, 46, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.35);
+    box-sizing: border-box;
+    font-family: var(--font-main, 'Space Grotesk', sans-serif);
+
+    /* Animação suave com suavização Elástica */
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Estado Ativo (Aberto) */
+.menu-lateral.open {
+    transform: translateX(0);
+}
+
+/* --------------------------------------------------------------------------
+3. NAVEGAÇÃO E LINKS INTERNOS
+   -------------------------------------------------------------------------- */
+.hamburger-bar-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hamburger-bar-list li {
+    width: 100%;
+}
+
+.hamburger-bar-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.85rem 1.15rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+    letter-spacing: 0.02em;
+}
+
+/* Efeitos Hover e Foco nos Links */
+.hamburger-bar-list a:hover {
+    color: #ffffff;
+    background-color: rgba(165, 122, 227, 0.2);
+    border-color: rgba(165, 122, 227, 0.4);
+    transform: translateX(6px);
+}
+
+.hamburger-bar-list a:active {
+    transform: translateX(3px) scale(0.98);
+}
+
+.hamburger-bar-list a:focus-visible {
+    outline: 2px solid #a57ae3;
+    outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+4. AJUSTES RESPONSIVOS (BREAKPOINTS)
+   -------------------------------------------------------------------------- */
+
+/* Dispositivos Pequenos (Dispositivos Móveis <= 480px) */
+@media (max-width: 480px) {
+    .menu-lateral {
+        width: 250px;
+        padding: 2rem 1.25rem;
+    }
+
+    .hamburger-bar-list a {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Telas Grandes (Desktop >= 1024px) */
+@media (min-width: 1024px) {
+    .menu-lateral {
+        width: 300px;
+        padding: 3rem 2rem;
+    }
+}

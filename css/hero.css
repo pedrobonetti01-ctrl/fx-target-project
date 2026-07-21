@@ -1,62 +1,182 @@
-/* HERO */
+/* ==========================================================================
+HERO SECTION MODULE - INTERNATIONAL ENTERPRISE STANDARD
+   ========================================================================== */
 
-.hero-section{
+/* --------------------------------------------------------------------------
+1. MAIN HERO CONTAINER & BACKGROUND
+   -------------------------------------------------------------------------- */
+.hero-section {
     width: 100%;
-    height: 300px;
-    margin-top: 90px;
+    min-height: calc(100vh - 70px);
+    margin-top: 70px;
+    /* Offset for fixed header */
+    padding: 3rem 1.5rem;
 
-    background-image: url(../images/Imagem\ de\ Graficos\ de\ Investimento.jpg);
+    /* Layered dark overlay over image for maximum text contrast and legibility */
+    background-image:
+        linear-gradient(135deg, rgba(15, 15, 26, 0.82) 0%, rgba(26, 26, 46, 0.88) 100%),
+        url('../images/Imagem de Graficos de Investimento.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
-    padding: 2rem;
+    background-attachment: scroll;
+
     display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-background{
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.18);
-    color: white;
-    border-radius: 7px;
-}
+/* --------------------------------------------------------------------------
+2. HERO GLASSMORPHISM CARD CONTAINER
+   -------------------------------------------------------------------------- */
+.hero-background {
+    width: 100%;
+    max-width: 880px;
+    padding: 2.25rem 1.5rem;
 
-.hero-background h2 {
-    font-size: 18px;
+    /* Modern Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+3. TYPOGRAPHY & HEADINGS
+   -------------------------------------------------------------------------- */
+.hero-background h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.85rem, 4vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-background p {
-    font-size: 12px;
-    text-align: start;
-    margin-bottom: 25px;
-    font-weight: 200;
-    text-shadow: 2px 2px 5px #000;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    font-weight: 300;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.25rem auto;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-background a {
-    background-color: var(--action-primary);
-    border: 1px solid var(--action-primary-border);
-    box-shadow: 0px 0px 10px #0000004a;
-    color: var(--action-primary-border);
-    text-shadow: 0px 0px 10px #0000004a;
-    padding: 10px 20px;
-    border-radius: 7px;
-    
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.hero-background a:hover {
-    background-color: var(--action-primary-border);
-    border: 1px solid var(--action-primary);
-    box-shadow: 0px 0px 10px #0000004a;
-    color: rgb(255, 255, 255);
-}
-
+/* --------------------------------------------------------------------------
+4. CALL TO ACTION (CTA) BUTTON
+   -------------------------------------------------------------------------- */
 .hero-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.hero-background a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    height: 52px;
+    padding: 0 2rem;
+
+    background-color: var(--action-primary, #a57ae3);
+    border: 2px solid var(--action-primary-border, #a57ae3);
+    color: #ffffff;
+    border-radius: 12px;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 8px 25px rgba(165, 122, 227, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.hero-background a:hover {
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+}
+
+.hero-background a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+.hero-background a:active {
+    transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+5. RESPONSIVE BREAKPOINTS & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+
+/* Mobile Devices (<= 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+
+    .hero-background {
+        padding: 1.75rem 1rem;
+        border-radius: 16px;
+    }
+
+    .hero-background a {
+        width: 100%;
+    }
+}
+
+/* Tablet Viewports (>= 768px) */
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 5rem 2rem;
+        background-attachment: fixed;
+        /* Parallax effect on supporting desktop browsers */
+    }
+
+    .hero-background {
+        padding: 3.5rem 3rem;
+    }
+}
+
+/* Desktop Viewports (>= 1024px) */
+@media (min-width: 1024px) {
+    .hero-section {
+        min-height: 85vh;
+    }
+
+    .hero-background {
+        padding: 4rem;
+    }
+}
+
+/* Ultra-Wide Viewports (>= 1440px) */
+@media (min-width: 1440px) {
+    .hero-background {
+        max-width: 1000px;
+        padding: 4.5rem 5rem;
+    }
 }

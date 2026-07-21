@@ -1,46 +1,187 @@
-/* CREATOR */
+/* ==========================================================================
+   CREATOR MODULE - INTERNATIONAL ENTERPRISE STANDARD
+   ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   1. SECTION CONTAINER & BACKGROUND OVERLAY
+   -------------------------------------------------------------------------- */
 .creator-section {
-    background-image: url(../images/Imagem\ de\ Background\ para\ Creator\ Section.jpg);
+    position: relative;
+    background-image:
+        linear-gradient(135deg, rgba(15, 15, 26, 0.92) 0%, rgba(26, 26, 46, 0.95) 100%),
+        url("../images/Imagem de Background para Creator Section.jpg");
     background-position: center;
     background-size: cover;
-
-    color: white;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.creator-section h2{
-    background-color: var(--bg-section-accent);
-    font-weight: 300;
-    font-size: 24px;
+.creator-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    font-weight: 700;
     text-align: center;
-    padding: 1rem;
+    padding: 2.25rem 1.5rem;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: -0.01em;
 }
 
-.creator-background{
+/* --------------------------------------------------------------------------
+   2. CREATOR CONTENT WRAPPER
+   -------------------------------------------------------------------------- */
+.creator-background {
     display: flex;
-    flex-direction: row;
-
-    padding: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+    box-sizing: border-box;
 }
 
-.creator-background p {
-    text-shadow: 0px 0px 5px #0000004a;
-    color: #000000;
-    font-size: 14px;
-    margin-bottom: 20px;
+/* --------------------------------------------------------------------------
+   3. PROFILE PHOTO CONTAINMENT & RING
+   -------------------------------------------------------------------------- */
+.creator-photo {
+    width: 130px;
+    height: 130px;
+    min-width: 130px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #a57ae3, #50e3c2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
+.creator-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   4. CREATOR INFO & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+.creator-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.creator-info p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 1.25rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   5. SOCIAL MEDIA BUTTONS
+   -------------------------------------------------------------------------- */
 .social-midia {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    width: 100%;
 }
 
-.creator-photo{
-    min-width: 100px;
-    height: 100px;
-    margin: 20px;
+/* Oculta as tags <i> vazias do HTML original sem estragar o layout */
+.social-midia i {
+    display: none;
 }
 
-.creator-photo img{
-    border-radius: 50%;
+.social-midia a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.75rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-midia a:hover {
+    background: #ffffff;
+    color: #1a1a2e;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE BREAKPOINTS & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+
+/* Tablet Viewports (>= 768px) - Mudança para layout lado a lado */
+@media (min-width: 768px) {
+    .creator-background {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+        padding: 4rem 2.5rem 5rem 2.5rem;
+    }
+
+    .creator-photo {
+        width: 160px;
+        height: 160px;
+        min-width: 160px;
+    }
+
+    .creator-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .social-midia {
+        justify-content: flex-start;
+    }
+}
+
+/* Desktop Viewports (>= 1024px) */
+@media (min-width: 1024px) {
+    .creator-section h2 {
+        padding: 2.75rem 2rem;
+    }
+
+    .creator-background {
+        gap: 4rem;
+        padding: 5rem 3rem 6rem 3rem;
+    }
+
+    .creator-photo {
+        width: 180px;
+        height: 180px;
+        min-width: 180px;
+    }
+
+    .creator-info p {
+        font-size: 1.05rem;
+    }
 }

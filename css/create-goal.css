@@ -1,93 +1,293 @@
-/* CREATE GOAL */
+/* ==========================================================================
+CREATE GOAL MODULE - INTERNATIONAL ENTERPRISE STANDARD
+   ========================================================================== */
 
-.goal-form{
+/* --------------------------------------------------------------------------
+1. MAIN CONTAINER & LAYOUT SETUP
+   -------------------------------------------------------------------------- */
+.form-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    height: 300px;
-    padding: 4rem;
-}
-
-.form-image{
-    margin-top: 90px;
-}
-
-.form-container p{
-    color: white;
-    padding: 1rem;
-    text-align: end;
-    margin-bottom: 20px;
-}
-
-.form-stylized-title{
-    background-color: var(--bg-section-accent);
-    width: 70%;
-    position: relative;
-    top: -30px;
-}
-
-.form-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
     width: 100%;
-    gap: 10px;
-    margin: 5px;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
-.radio-group{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
+/* --------------------------------------------------------------------------
+2. HERO IMAGE SECTION
+   -------------------------------------------------------------------------- */
+.form-image {
     width: 100%;
-    gap: 10px;
-    margin: 20px 5px;
+    max-height: 220px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.form-row input{
-    width: 120px;
-    height: 25px;
-    border-radius: 4px;
-    border-color: rgba(0, 123, 255, 0.194);
-    background-color: rgb(255, 255, 255);
-}
-
-.actions-interface{
+.form-image img {
     width: 100%;
-    padding: 1.5rem;
-    text-align: end;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
-.actions-interface a{
-    background-color: white;
-    border: 2px solid grey;
-    color: grey;
-    padding: 10px 20px;
-    border-radius: 7px;
-    text-decoration: none;
+/* --------------------------------------------------------------------------
+3. STYLIZED TITLE BANNER
+   -------------------------------------------------------------------------- */
+.form-stylized-title {
+    background-color: var(--bg-section-accent, #1a1a2e);
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    box-sizing: border-box;
 }
 
-.actions-interface a:hover{
-    background-color: grey;
-    border: 2px solid gray;
-    color: rgb(255, 255, 255);
-}
-
-
-.actions-interface button{
-    background-color: white;
-    border: 2px solid #A57AE3;
-    color: #A57AE3;
-    padding: 10px 20px;
-    border-radius: 7px;
-    text-decoration: none;
-}
-
-.actions-interface button:hover{
-    background-color: #A57AE3;
-    border: 2px solid #A57AE3;
+.form-container .form-stylized-title p {
     color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+4. FORM CONTAINER & CONTROL ELEMENTS
+   -------------------------------------------------------------------------- */
+.goal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    height: auto;
+    /* Fluid height to prevent layout clipping */
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* Input Fields & Labels */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.form-row label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2d3748;
+}
+
+.form-row input {
+    width: 100%;
+    height: 44px;
+    /* Optimal touch target */
+    padding: 0.5rem 0.875rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 123, 255, 0.25);
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #1a202c;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-row input:focus {
+    outline: none;
+    border-color: #a57ae3;
+    box-shadow: 0 0 0 3px rgba(165, 122, 227, 0.25);
+}
+
+/* Radio Currency Selector Group */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+    margin: 0.25rem 0 0.75rem 0;
+    padding: 0.75rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #a57ae3;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+.radio-group input[type="radio"]:checked {
+    background-color: #a57ae3;
+    box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+.radio-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+    cursor: pointer;
+    margin-right: 1.25rem;
+    user-select: none;
+}
+
+/* --------------------------------------------------------------------------
+5. ACTIONS INTERFACE (BUTTONS)
+   -------------------------------------------------------------------------- */
+.actions-interface {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid #edf2f7;
+}
+
+.actions-interface a,
+.actions-interface button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.actions-interface a.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #a0aec0;
+    color: #4a5568;
+}
+
+.actions-interface a.btn-secondary:hover {
+    background-color: #a0aec0;
+    border-color: #a0aec0;
+    color: #ffffff;
+}
+
+.actions-interface button.btn-primary {
+    background-color: transparent;
+    border: 2px solid #a57ae3;
+    color: #a57ae3;
+}
+
+.actions-interface button.btn-primary:hover {
+    background-color: #a57ae3;
+    border-color: #a57ae3;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(165, 122, 227, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+6. RESPONSIVE BREAKPOINTS & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+
+/* Tablet Viewports (>= 640px) */
+@media (min-width: 640px) {
+    .goal-form {
+        padding: 2.5rem;
+    }
+
+    .form-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .form-row label {
+        flex: 0 0 180px;
+    }
+
+    .form-row input {
+        flex: 1;
+    }
+
+    .radio-group {
+        justify-content: flex-end;
+    }
+
+    .actions-interface {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .actions-interface a,
+    .actions-interface button {
+        width: auto;
+        min-width: 140px;
+    }
+}
+
+/* Desktop Viewports (>= 1024px) */
+@media (min-width: 1024px) {
+    .form-container {
+        display: grid;
+        grid-template-columns: 380px 1fr;
+        grid-template-rows: auto 1fr;
+        align-items: stretch;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        border-radius: 16px;
+        overflow: hidden;
+        background-color: #ffffff;
+        margin: 4rem auto;
+    }
+
+    .form-image {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        max-height: none;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .form-stylized-title {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .goal-form {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        border-radius: 0;
+        padding: 3rem;
+        box-shadow: none;
+    }
+}
+
+/* Ultra-Wide Viewports (>= 1440px) */
+@media (min-width: 1440px) {
+    .form-container {
+        max-width: 1140px;
+        grid-template-columns: 440px 1fr;
+    }
+
+    .goal-form {
+        padding: 3.5rem;
+    }
 }

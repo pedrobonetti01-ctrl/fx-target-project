@@ -1,66 +1,231 @@
-/* PROJECTS */
+/* ==========================================================================
+   PROJECTS & KEY-VALUE ROWS MODULE - ENTERPRISE DASHBOARD STANDARD
+   ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   1. MAIN CONTAINER & SECTION HEADER
+   -------------------------------------------------------------------------- */
 .projects-container {
-    margin-top: 120px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
+    max-width: 1140px;
+    margin: 100px auto 40px auto;
+    padding: 0 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+.projects-container h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+/* Subtítulo dinâmico (caso inserido via JS) */
+.projects-container p,
+.projects-subtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. KEY-VALUE CARD CONTAINER (MOBILE FIRST - 1 COLUNA)
+   -------------------------------------------------------------------------- */
 .key-value-rows {
-    margin: 20px;
-    padding: 2rem;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.413);
-    border-radius: 7px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    /* Layout em Grid Flexível */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
 }
 
+.key-value-rows:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* --------------------------------------------------------------------------
+   3. CARD HEADER & INTERFACE ACTIONS
+   -------------------------------------------------------------------------- */
+.key-value-interface {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 0.25rem;
+}
+
+/* Botões de Ação do Card (VIEW DETAILS, EDIT) */
+.key-value-interface button,
+.key-value-interface a,
+.btn-card-action {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.key-value-interface button:hover,
+.key-value-interface a:hover,
+.btn-card-action:hover {
+    background-color: #334155;
+    color: #ffffff;
+    border-color: #334155;
+}
+
+/* --------------------------------------------------------------------------
+   4. KEY-VALUE PAIRS (RÓTULO vs VALOR)
+   -------------------------------------------------------------------------- */
 .key-value-item {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 10px 0px;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
 }
 
-.key-value-interface {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-bottom: 30px;
+/* Chaves / Rótulos (ex: PROJECT ID, MONTHLY EARNINGS) */
+.key-value-item strong,
+.key-value-item label,
+.key-value-item .key-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Valores principais */
+.key-value-item span,
+.key-value-item p,
+.key-value-item .value-text {
+    font-size: 0.925rem;
+    color: #0f172a;
+    font-weight: 600;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* Highlight verde para valores monetários/ganhos */
+.key-value-item .earnings,
+.key-value-item [data-type="earnings"] {
+    color: #16a34a !important;
+    font-weight: 700 !important;
+}
+
+/* Tag/Badge para Status (ex: ACTIVE) */
+.status-badge,
+.badge-active,
+.key-value-item .status {
+    display: inline-block;
+    background-color: #dcfce7;
+    color: #15803d;
+    font-size: 0.725rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    width: fit-content;
+}
+
+/* --------------------------------------------------------------------------
+   5. BOTTOM TABLE ACTIONS BUTTONS
+   -------------------------------------------------------------------------- */
 .table-actions {
     width: 100%;
-    padding: 1.5rem;
-    text-align: end;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    box-sizing: border-box;
 }
 
-.table-btn-back{
-    background-color: white;
-    border: 2px solid grey;
-    color: grey;
-    padding: 10px 20px;
-    border-radius: 7px;
+.table-btn-back,
+.table-btn-create-goal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
     text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.table-btn-back:hover{
-    background-color: grey;
-    border: 2px solid gray;
-    color: rgb(255, 255, 255);
+.table-btn-back {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
 }
 
-.table-btn-create-goal{
-    background-color: white;
-    border: 2px solid #A57AE3;
-    color: #A57AE3;
-    padding: 10px 20px;
-    border-radius: 7px;
-    text-decoration: none;
+.table-btn-back:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+.table-btn-create-goal {
+    background-color: #a57ae3;
+    border: 1px solid #a57ae3;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(165, 122, 227, 0.25);
 }
 
 .table-btn-create-goal:hover {
-    background-color: #A57AE3;
-    border: 2px solid #A57AE3;
-    color: #ffffff;
+    background-color: #8b55d1;
+    border-color: #8b55d1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(165, 122, 227, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE BREAKPOINTS (TABLET & DESKTOP GRID)
+   -------------------------------------------------------------------------- */
+
+/* Tablet (>= 640px) - Grid de 2 Colunas */
+@media (min-width: 640px) {
+    .key-value-rows {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Desktop (>= 1024px) - Grid de 3 Colunas (Conforme Imagem 1) */
+@media (min-width: 1024px) {
+    .key-value-rows {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem;
+        gap: 1.5rem 2rem;
+    }
 }

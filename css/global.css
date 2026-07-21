@@ -8,12 +8,14 @@ img {
 body {
     font-family: var(--font-main);
     margin: 0;
+    padding: 0;
+    /* Reserva a altura exata do cabeçalho fixo para não cobrir o conteúdo */
+    padding-top: 90px; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-bottom: 40px;
 }
 
 main {
-  flex: 1; 
+    flex: 1;
 }

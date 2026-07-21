@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX Target - Edit Goal</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/create-goal.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/hamburger-bar.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="main-header">
+        <button class="button-toggle">
+            <span class="hamburguer-bar"></span>
+            <span class="hamburguer-bar"></span>
+            <span class="hamburguer-bar"></span>
+        </button>
+
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../images/FX Target Logo.png" alt="FX Target Logo">
+                <span hidden>FX Target</span>
+            </a>
+        </div>
+    </header>
+    <main class="form-container">
+        <div class="form-image">
+            <img src="../images/pexels-felicity-tai-7964203.jpg" alt="Decoration">
+        </div>
+
+        <div class="form-stylized-title">
+            <p>Editar Projeto</p>
+        </div>
+
+        <form class="goal-form" id="editGoalForm">
+            <input type="hidden" id="projectId">
+
+            <div class="form-row">
+                <label for="projectName">Nome do Projeto:</label>
+                <input type="text" id="projectName" required>
+            </div>
+
+            <div class="form-row">
+                <label for="monthlyReserve">Reserva mensal:</label>
+                <input type="number" id="monthlyReserve" required step="any">
+            </div>
+
+            <div class="radio-group">
+                <input type="radio" id="monthBRL" name="monthly-currency-choice" value="BRL">
+                <label for="monthBRL">BRL</label>
+
+                <input type="radio" id="monthUSD" name="monthly-currency-choice" value="USD">
+                <label for="monthUSD">USD</label>
+
+                <input type="radio" id="monthEUR" name="monthly-currency-choice" value="EUR">
+                <label for="monthEUR">EUR</label>
+            </div>
+
+            <div class="form-row">
+                <label for="finalTarget">Meta final:</label>
+                <input type="number" id="finalTarget" required step="any">
+            </div>
+
+            <div class="radio-group">
+                <input type="radio" id="finalBRL" name="final-currency-choice" value="BRL">
+                <label for="finalBRL">BRL</label>
+
+                <input type="radio" id="finalUSD" name="final-currency-choice" value="USD">
+                <label for="finalUSD">USD</label>
+
+                <input type="radio" id="finalEUR" name="final-currency-choice" value="EUR">
+                <label for="finalEUR">EUR</label>
+            </div>
+
+            <div class="form-row">
+                <label for="projectApplication">Tempo de aplicação (meses):</label>
+                <input type="number" id="projectApplication" required>
+            </div>
+
+            <div class="actions-interface">
+                <a href="projects.html" class="btn-secondary">Cancelar</a>
+                <button type="submit" class="btn-primary">Atualizar</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- HAMBURGUER-BAR START -->
+    <div class="menu-lateral">
+        <ul class="hamburger-bar-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/create-goal.html">Goals</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+        </ul>
+    </div>
+    <!-- HAMBURGUER-BAR END -->
+
+    <footer class="footer">
+        <p>Todos os Direitos Reservados ©</p>
+    </footer>
+    <script type="module" src="../js/edit-goal.js"></script>
+    <script src="../js/hamburger-bar.js"></script>
+</body>
+
+</html>

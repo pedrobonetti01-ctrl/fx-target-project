@@ -1,37 +1,145 @@
-/* HOW IT WORKS CONTAINER */
+/* ==========================================================================
+HOW IT WORKS MODULE - INTERNATIONAL ENTERPRISE STANDARD
+   ========================================================================== */
 
-.how-it-works{
-    padding: 2rem;
+/* --------------------------------------------------------------------------
+1. SECTION CONTAINER
+   -------------------------------------------------------------------------- */
+.how-it-works {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+    box-sizing: border-box;
 }
 
-.step-grid{
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 30px;
-
-    padding: 2rem 0;
-}
-
-.step-item{
+.how-it-works>h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary, #1a1a2e);
     text-align: center;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 7px;
-    box-shadow: 0px 0px 20px #00000077;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
 }
 
-.step-item h3{
-    font-size: 20px;
-    margin-bottom: 10px;
+/* --------------------------------------------------------------------------
+2. STEP GRID LAYOUT
+   -------------------------------------------------------------------------- */
+.step-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.step-item p{
-    font-size: 16px;
-    text-align: start;
+/* --------------------------------------------------------------------------
+3. STEP CARDS & HOVER INTERACTIONS
+   -------------------------------------------------------------------------- */
+.step-item {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2.25rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.35s ease;
+    box-sizing: border-box;
 }
 
-.step-icon{
-    font-size: 40px;
+.step-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(165, 122, 227, 0.3);
+}
+
+/* Normalizes the h1/h2 tags wrapping the icons */
+.step-item h1,
+.step-item h2 {
+    margin: 0 0 1.25rem 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* Icon Styling and Micro-interaction */
+.step-icon {
+    font-size: 2.75rem;
+    color: var(--action-primary, #a57ae3);
+    transition: transform 0.35s ease, color 0.35s ease;
+    display: inline-block;
+}
+
+.step-item:hover .step-icon {
+    transform: scale(1.15) rotate(5deg);
+    color: var(--action-primary-border, #8252c9);
+}
+
+/* Headings & Paragraph Typography */
+.step-item h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary, #1a1a2e);
+    margin: 0 0 0.75rem 0;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+
+.step-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary, #555566);
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+4. RESPONSIVE BREAKPOINTS & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+
+/* Tablet Viewports (2 columns grid) */
+@media (min-width: 640px) {
+    .step-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+    }
+}
+
+/* Desktop Viewports (4 columns grid in a single clean row) */
+@media (min-width: 1024px) {
+    .how-it-works {
+        padding: 5rem 2rem;
+    }
+
+    .how-it-works>h2 {
+        margin-bottom: 3.5rem;
+    }
+
+    .step-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .step-item {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+/* Ultra-Wide Viewports (>= 1440px) */
+@media (min-width: 1440px) {
+    .how-it-works {
+        padding: 6rem 2rem;
+    }
+
+    .step-grid {
+        gap: 2.5rem;
+    }
 }

@@ -1,58 +1,184 @@
-/* CARDS CONTAINER */
+/* ==========================================================================
+CARDS MODULE - INTERNATIONAL ENTERPRISE STANDARD
+   ========================================================================== */
 
+/* --------------------------------------------------------------------------
+1. SECTION TITLE
+   -------------------------------------------------------------------------- */
+.card-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary, #1a1a2e);
+    text-align: center;
+    margin: 3.5rem 1.5rem 2rem 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* --------------------------------------------------------------------------
+2. CARDS CONTAINER
+   -------------------------------------------------------------------------- */
 .cards {
-    background-color: var(--bg-section-accent);
-    padding: 2rem;
-
+    background-color: var(--bg-section-accent, #1a1a2e);
+    padding: 3rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.card-title {
-    margin: 20px 20px;
-}
-
-.card-item{
-    width: 350px;
-    height: 500px;
-    border-radius: 7px;
+/* --------------------------------------------------------------------------
+3. CARD ITEM & HOVER INTERACTIONS
+   -------------------------------------------------------------------------- */
+.card-item {
+    width: 100%;
+    max-width: 500px;
+    min-height: 460px;
+    border-radius: 16px;
     background-position: center;
     background-size: cover;
-
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
 }
 
-.card-item h3{
-    font-size: 20px;
-    text-align: center;
-    color: #FFFF00;
-    text-shadow: 0px 0px 10px #00000084;
-    margin-bottom: 20px;
+/* Elevated Hover Effect for Desktop */
+.card-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.card-item p{
-    font-size: 14px;
-    text-shadow: 0px 0px 5px #00000084;
-    font-weight: 200;
+/* Image Overlays for High Contrast & Readability */
+.card-problema {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(15, 15, 26, 0.88) 100%),
+        url('../images/Imagem de Pessoa Entediada em um Escritório Chato.jpg');
 }
 
-.card-background{
-    background-color: rgba(0, 0, 0, 0.297);
-    backdrop-filter: blur(5px);
-    color: white;
-    border-radius: 7px;
-    padding: 2rem;
+.card-solucao {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(15, 15, 26, 0.88) 100%),
+        url('../images/Imagem de Planejando uma Faculdade no Exterior.jpg');
 }
 
-.card-problema{
-    background-image: url(../images/Imagem\ de\ Pessoa\ Entediada\ em\ um\ Escritório\ Chato.jpg);
+/* --------------------------------------------------------------------------
+4. GLASSMORPHISM INNER CARD
+   -------------------------------------------------------------------------- */
+.card-background {
+    background: rgba(15, 15, 26, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 2rem 1.75rem;
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
-.card-solucao{
-    background-image: url(../images/Imagem\ de\ Planejando\ uma\ Faculdade\ no\ Exterior.jpg);
+.card-item:hover .card-background {
+    background: rgba(15, 15, 26, 0.82);
+}
+
+/* Headings & Typography */
+.card-item h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.45rem);
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.35;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+/* Problem Accent Color (Amber/Warm Red) */
+.card-problema h3 {
+    color: #ffab76;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Solution Accent Color (Mint/Emerald) */
+.card-solucao h3 {
+    color: #50e3c2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-item p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+5. RESPONSIVE BREAKPOINTS & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+
+/* Tablet Viewports (>= 768px) - Side-by-side layout begins */
+@media (min-width: 768px) {
+    .card-title {
+        margin: 4.5rem 1.5rem 2.5rem 1.5rem;
+    }
+
+    .cards {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        /* Guarantees equal card height */
+        gap: 2rem;
+        padding: 4rem 2rem;
+    }
+
+    .card-item {
+        flex: 1;
+        max-width: 480px;
+        min-height: 480px;
+    }
+
+    .card-item h3 {
+        text-align: left;
+    }
+}
+
+/* Desktop Viewports (>= 1024px) */
+@media (min-width: 1024px) {
+    .cards {
+        gap: 2.5rem;
+        padding: 5rem 4rem;
+    }
+
+    .card-item {
+        max-width: 540px;
+        min-height: 500px;
+    }
+
+    .card-background {
+        padding: 2.25rem 2rem;
+    }
+}
+
+/* Ultra-Wide Viewports (>= 1440px) */
+@media (min-width: 1440px) {
+    .cards {
+        max-width: 1280px;
+        margin: 0 auto;
+        border-radius: 24px;
+        padding: 6rem 4rem;
+    }
 }
